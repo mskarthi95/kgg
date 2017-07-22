@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Book.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">my-app</a> &gt; <a href="index.source.html" class="el_package">com.mycompany.app</a> &gt; <span class="el_source">Book.java</span></div><h1>Book.java</h1><pre class="source lang-java linenums">package com.mycompany.app;
+import java.util.ArrayList;
+import java.util.List;
+
+
+class Book {
+public int id;
+public String name, author, publiser;
+public int quantity;
+<span class="fc" id="L10">public Book(int id, String name,String author,String publiser,int quantity){</span>
+<span class="fc" id="L11">this.id = id;</span>
+<span class="fc" id="L12">this.name = name;</span>
+<span class="fc" id="L13">this.author=author;</span>
+<span class="fc" id="L14">this.publiser=publiser;</span>
+<span class="fc" id="L15">this.quantity =quantity;</span>
+<span class="fc" id="L16">}</span>
+public boolean equals(Object obj){
+<span class="fc" id="L18">Book emp = (Book) obj;</span>
+<span class="fc" id="L19">boolean status = false;</span>
+<span class="pc bpc" id="L20" title="5 of 10 branches missed.">if(this.name.equalsIgnoreCase(emp.name)</span>
+&amp;&amp; this.id == emp.id &amp;&amp;
+this.author==emp.author&amp;&amp;
+this.publiser==emp.publiser
+&amp;&amp; this.quantity == emp.quantity){
+<span class="fc" id="L25">status = true;</span>
+}
+<span class="fc" id="L27">return status;</span>
+}
+public static List&lt;Book&gt; getBookList(){
+<span class="fc" id="L30">List&lt;Book&gt; emps = new ArrayList&lt;Book&gt;();</span>
+<span class="fc" id="L31">emps.add(new Book(1, &quot;Nats&quot;,&quot;xyz&quot;,&quot;aaa&quot;, 15000));</span>
+<span class="fc" id="L32">emps.add(new Book(2, &quot;Kalid&quot;,&quot;abc&quot;,&quot;bbb&quot;, 25000));</span>
+<span class="fc" id="L33">emps.add(new Book(3, &quot;Krish&quot;,&quot;mno&quot;,&quot;ccc&quot;, 5000));</span>
+<span class="fc" id="L34">return emps;</span>
+}
+
+/*public int hashCode(){
+return this.empId;
+}
+
+public String getName() {
+return name;
+}
+public void setName(String name) {
+this.name = name;
+}
+public int getEmpId() {
+return empId;
+}
+public void setEmpId(int empId) {
+this.empId = empId;
+}
+public int getSalary() {
+return salary;
+}
+public void setSalary(int salary) {
+this.salary = salary;
+}
+}
+// Constructor 
+// Getter and Setter
+// Methods*/
+ 
+@Override
+public String toString() {
+<span class="nc" id="L66">return &quot;id : &quot; + id + &quot;, name : &quot; + name + &quot;, author : &quot; + author + &quot;, publiser : &quot; + publiser + &quot;, quantity : &quot;</span>
++ quantity;
+}
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.7.9.201702052155</span></div></body></html>

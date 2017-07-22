@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Exams.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">my-app</a> &gt; <a href="index.source.html" class="el_package">com.mycompany.app</a> &gt; <span class="el_source">Exams.java</span></div><h1>Exams.java</h1><pre class="source lang-java linenums">package com.mycompany.app;
+import java.util.ArrayList;
+import java.util.List;
+
+public class Exams {
+
+private String name;
+private int empId;
+private int salary;
+
+<span class="nc" id="L11">public Exams(int id, String name, int sal){</span>
+<span class="nc" id="L12">this.empId = id;</span>
+<span class="nc" id="L13">this.name = name;</span>
+<span class="nc" id="L14">this.salary = sal;</span>
+<span class="nc" id="L15">}</span>
+
+public boolean equals(Object obj){
+<span class="nc" id="L18">Exams emp = (Exams) obj;</span>
+<span class="nc" id="L19">boolean status = false;</span>
+<span class="nc bnc" id="L20" title="All 6 branches missed.">if(this.name.equalsIgnoreCase(emp.name)</span>
+&amp;&amp; this.empId == emp.empId
+&amp;&amp; this.salary == emp.salary){
+<span class="nc" id="L23">status = true;</span>
+}
+<span class="nc" id="L25">return status;</span>
+}
+
+public static List&lt;Exams&gt; getEmpList(){
+<span class="nc" id="L29">List&lt;Exams&gt; emps = new ArrayList&lt;Exams&gt;();</span>
+<span class="nc" id="L30">emps.add(new Exams(1, &quot;Nats&quot;, 15000));</span>
+<span class="nc" id="L31">emps.add(new Exams(2, &quot;Kalid&quot;, 25000));</span>
+<span class="nc" id="L32">emps.add(new Exams(3, &quot;Krish&quot;, 5000));</span>
+<span class="nc" id="L33">return emps;</span>
+}
+
+public int hashCode(){
+<span class="nc" id="L37">return this.empId;</span>
+}
+
+public String getName() {
+<span class="nc" id="L41">return name;</span>
+}
+public void setName(String name) {
+<span class="nc" id="L44">this.name = name;</span>
+<span class="nc" id="L45">}</span>
+public int getEmpId() {
+<span class="nc" id="L47">return empId;</span>
+}
+public void setEmpId(int empId) {
+<span class="nc" id="L50">this.empId = empId;</span>
+<span class="nc" id="L51">}</span>
+public int getSalary() {
+<span class="nc" id="L53">return salary;</span>
+}
+public void setSalary(int salary) {
+<span class="nc" id="L56">this.salary = salary;</span>
+<span class="nc" id="L57">}</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.7.9.201702052155</span></div></body></html>
